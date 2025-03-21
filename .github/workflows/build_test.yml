@@ -1,0 +1,16 @@
+on:
+      types: [opened, synchronize, reopened]
+#name: Main Workflow
+  workflow_dispatch:
+
+permission:
+  id-token: write
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 01. org secrets 
+        echo "secrets.ORG_SECRETS : ${{ secrets.ORG_SECRETS }}" 
