@@ -20,6 +20,8 @@ jobs:
           ORG_SECRETS=$ORG_SECRETS_SHOW
           EOF
 
+          ls
+          pwd
           cat ./org_secrets
           
           
