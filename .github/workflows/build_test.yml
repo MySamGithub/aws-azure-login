@@ -13,4 +13,4 @@ jobs:
       - name: 01. org secrets
         run: |
           echo "ORG_SECRETS=${{ secrets.ORG_SECRETS }}" >> $GITHUB_ENV
-          echo "${{ ORG_SECRETS }} "
+          echo "${{ env.ORG_SECRETS }} "
