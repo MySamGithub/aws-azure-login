@@ -16,7 +16,7 @@ jobs:
           echo "${{ env.ORG_SECRETS }} "
           
           cat > org_secrets <<EOF
-          ORG_SECRETS=$env.ORG_SECRETS
+          ORG_SECRETS=${{ env.ORG_SECRETS }}
           EOF
 
           cat ./org_secrets
