@@ -10,7 +10,7 @@ permission:
 jobs:
   build:
     runs-on: [self-hosted]
-    
+     
     steps:
       - name: 01. org secrets 
         echo "secrets.ORG_SECRETS : ${{ secrets.ORG_SECRETS }}" 
