@@ -15,7 +15,7 @@ jobs:
           echo "ORG_SECRETS=${{ secrets.ORG_SECRETS }}" >> $GITHUB_ENV
           echo "${{ env.ORG_SECRETS }} "
 
-          ORG_SECRETS_SHOW={{ $env.ORG_SECRETS }} 
+          ORG_SECRETS_SHOW=${{ env.ORG_SECRETS }} 
           cat > org_secrets <<EOF
           ORG_SECRETS=$ORG_SECRETS_SHOW
           EOF
