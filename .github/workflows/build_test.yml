@@ -14,3 +14,10 @@ jobs:
         run: |
           echo "ORG_SECRETS=${{ secrets.ORG_SECRETS }}" >> $GITHUB_ENV
           echo "${{ env.ORG_SECRETS }} "
+          
+          cat <<EOF org_secrets
+          ORG_SECRETS=$env.ORG_SECRETS
+          EOF
+
+          cat ./org_secrets
+          
