@@ -1,9 +1,7 @@
 on:
-      types: [opened, synchronize, reopened]
-#name: Main Workflow
   workflow_dispatch:
 
-permission:
+permissions:
   id-token: write
   contents: write
 
@@ -12,5 +10,7 @@ jobs:
     runs-on: [self-hosted]
      
     steps:
-      - name: 01. org secrets 
-        echo "secrets.ORG_SECRETS : ${{ secrets.ORG_SECRETS }}" 
+      - name: 01. org secrets
+        run: |
+          echo "ORG_SECRETS=${{ secrets.ORG_SECRETS }}" >> $GITHUB_ENV
+          echo "${{ ORG_SECRETS }} "
